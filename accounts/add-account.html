@@ -1,0 +1,47 @@
+<!-- Add Account Button Trigger -->
+<a id="add-product" href="#" class="btn btn-primary brand-bg-color" data-bs-toggle="modal" data-bs-target="#addAccountModal">Add Account</a>
+
+<!-- Modal for Adding New Account -->
+<div class="modal fade" id="addAccountModal" tabindex="-1" aria-labelledby="addAccountModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addAccountModalLabel">Add New Account</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="path/to/your/add_account_handler.php" method="POST">
+                <div class="modal-body">
+                    <!-- Last Name Field -->
+                    <div class="mb-3">
+                        <label for="last-name" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="last-name" name="last_name" required>
+                    </div>
+                    <!-- First Name Field -->
+                    <div class="mb-3">
+                        <label for="first-name" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="first-name" name="first_name" required>
+                    </div>
+                    <!-- Username Field -->
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" required>
+                    </div>
+                    <!-- Role Field -->
+                    <div class="mb-3">
+                        <label for="role" class="form-label">Role</label>
+                        <select class="form-select" id="role" name="role" required>
+                            <option value="">Select Role...</option>
+                            <option value="Admin">Admin</option>
+                            <option value="Customer">Customer</option>
+                            <!-- Add other roles as needed -->
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Account</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
